@@ -1,0 +1,138 @@
+:root {
+    --main-color: #0065FC;
+    --filter-bg-color: #DEEBFF;
+    --block-background: #D9D9D9;
+    --main-bg-color: #F2F2F2;
+
+    --title-font-size: 1.375rem;
+    --subtitle-font-size: 1.125rem;
+    --text-font-size: 1rem;
+    --articles-description-font-size: 0.875rem;
+    --text-font-weight: normal;
+}
+
+/*=== Most properties that apply to more than one section or main element === */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    /* border: 1px solid red; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-card {
+    padding: 0 50px;
+    max-width: 90rem;
+    min-width: 20rem;
+    gap: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header-main gap = 30px , main- footer gap should be = 35px, so, i came up with this solution, global gap 30px, and add 5px where it's needed */
+/* All because in the prototype, the header is not into the "main card", i should have been more focused */
+main,
+.footer {
+    margin-top: 5px;
+}
+
+section,
+header,
+footer {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    gap: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h2 {
+    font-size: var(--title-font-size);
+}
+
+h3 {
+    font-size: var(--subtitle-font-size);
+}
+
+.card-title,
+a,
+li,
+p,
+span {
+    font-size: var(--text-font-size);
+}
+
+.card-description {
+    font-size: var(--articles-description-font-size);
+}
+
+.currency {
+    font-weight: bold;
+}
+
+.card-rating {
+    position: relative;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+i {
+    color: var(--main-color);
+}
+
+i.neutral-star {
+    color: var(--main-bg-color)
+}
+
+i.fa-star {
+    font-size: 14px;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Temporaire!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+img {
+    width: 40px;
+    height: 40px;
+}
